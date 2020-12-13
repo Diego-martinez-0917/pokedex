@@ -1,5 +1,5 @@
 import React from 'react';
-export function ColorFilter() {
+export function ColorFilter({handleChangeColor}) {
     const optionsColor = [
         {name: 'blue',value: '1',},
         {name: 'yellow',value: '2'},
@@ -12,9 +12,7 @@ export function ColorFilter() {
         {name: 'pink',value: '9',},
         {name: 'black',value: '10'},
       ];
-    const handleChangeColor = (value) => {
-    console.log(value)
-    }  
+    
   return (
     <div  className='color'>     
      <div className="color-radiobuttons">

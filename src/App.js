@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { useEffect } from 'react';
 import { Header } from './pages/header/header';
 import { MainView } from './pages/main/mainView';

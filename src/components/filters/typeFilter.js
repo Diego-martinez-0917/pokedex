@@ -1,5 +1,5 @@
 import React from 'react';
-export function TypeFilter() {
+export function TypeFilter({handleChangeType}) {
     const TypeRadioButton = [
         {name: 'Bug', value: '1'},
         {name: 'Psychic', value: '2'},
@@ -22,9 +22,7 @@ export function TypeFilter() {
         {name: 'Grass', value: '19'},
         {name: 'Unknown', value: '20'},
       ]
-      const handleChangeGender = (value) => {
-        console.log(value)
-      }  
+      
   return (
     <div className='type'>
         <h4 style={{margin:'5px'}}>Filters</h4>
@@ -32,7 +30,7 @@ export function TypeFilter() {
             <h6 className='title'>Type</h6>             
             { TypeRadioButton.map(option=>
             <div key={option.name}>
-                <input type="radio" name="radio-type" value={option.value} onChange={()=>handleChangeGender(option.value)}/>
+                <input type="radio" name="radio-type" value={option.value} onChange={()=>handleChangeType(option.value)}/>
             <label>{option.name}</label>
             </div>
             )}
