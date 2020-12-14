@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+
 export function GenderFilter({handleChangeGender}) {
-    const GenderRadioButton = [
-        {name: 'All', value: 'all'},
-        {name: 'Male', value: 'male'},
-        {name: 'Female', value: 'female'},
-        {name: 'Undefined', value: 'genderless'}
-      ]
+  
+  const GenderRadioButton = [
+    {name: 'All', value: 'all'},
+    {name: 'Male', value: 'male'},
+    {name: 'Female', value: 'female'},
+    {name: 'Undefined', value: 'genderless'}
+  ]
       
   return (
     <div className='gender'>

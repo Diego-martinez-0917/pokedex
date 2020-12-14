@@ -123,8 +123,7 @@
     }
     
 }
-.modal-content{
-    
+.modal-content{    
     margin-left: 50px ;   
     .modal-container{
     display: grid;
@@ -136,11 +135,10 @@
             grid-area: imgpok;
             height: 400px;
         }
-        .conten-lateral{
-            height: 100%;
+        .conten-lateral{            
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: min-content auto;
+            grid-template-rows: min-content min-content;
             margin-top: 10px;
             .number{
                 background-color: grey;
@@ -152,12 +150,40 @@
                 vertical-align: baseline;
             }
             .table-detail{
-             grid-column: 1/-1;
-             display: grid;
-             grid-template-columns: repeat(2, 1fr);
-             grid-template-rows: repeat(6, min-content);             
-             margin-right: 40px;
-             margin-top: 20px;
+                grid-column: 1/-1;
+                display: grid;             
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6,1fr);             
+                margin-right: 40px;
+                margin-top: 20px;
+                padding: 30px;
+                background-color: gray;
+                color: white;
+                border-radius: 50px;
+                &>h5{
+                    border-bottom-color: white;
+                    border-bottom-style: solid;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+        .evolution-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column: 1/-1;
+            gap: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            .pokemon-evolution-card{
+                border-color: gray;
+                border-style: solid;
+                border-radius: 40px;
+                text-align:center;                        
+                .pokemonName > h4{
+                    text-align: center;
+                    
+                }
             }
         }
     }

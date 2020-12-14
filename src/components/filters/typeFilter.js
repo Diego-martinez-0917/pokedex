@@ -1,27 +1,29 @@
-import React from 'react';
+import React from 'react'
+
 export function TypeFilter({handleChangeType}) {
-    const TypeRadioButton = [
-        {name: 'Bug', value: '1'},
-        {name: 'Psychic', value: '2'},
-        {name: 'Electric', value: '3'},
-        {name: 'Fighting', value: '4'},
-        {name: 'Water', value: '5'},
-        {name: 'Fairy', value: '6'},
-        {name: 'Ground',  value: '7'},
-        {name: 'Dark', value: '8'},
-        {name: 'Fire', value: '9'},
-        {name: 'Dragon', value: '10'},
-        {name: 'Ice', value: '11'},
-        {name: 'Steel', value: '12'},
-        {name: 'Flying', value: '13'},
-        {name: 'Plant', value: '14'},
-        {name: 'Rock', value: '15'},
-        {name: 'Poison', value: '16'},
-        {name: 'Normal', value: '17'},
-        {name: 'Ghost', value: '18'},
-        {name: 'Grass', value: '19'},
-        {name: 'Unknown', value: '20'},
-      ]
+  
+  const TypeRadioButton = [
+    {name: 'Bug', value: 'bug'},
+    {name: 'Psychic', value: 'psychic'},
+    {name: 'Electric', value: 'electric'},
+    {name: 'Fighting', value: 'fighting'},
+    {name: 'Water', value: 'water'},
+    {name: 'Fairy', value: 'fairy'},
+    {name: 'Ground',  value: 'ground'},
+    {name: 'Dark', value: 'dark'},
+    {name: 'Fire', value: 'fire'},
+    {name: 'Dragon', value: 'dragon'},
+    {name: 'Ice', value: 'ice'},
+    {name: 'Steel', value: 'steel'},
+    {name: 'Flying', value: 'flying'},
+    {name: 'Shadow', value: 'shadow'},
+    {name: 'Rock', value: 'rock'},
+    {name: 'Poison', value: 'poison'},
+    {name: 'Normal', value: 'normal'},
+    {name: 'Ghost', value: 'ghost'},
+    {name: 'Grass', value: 'grass'},
+    {name: 'Unknown', value: 'unknown'},
+  ]
       
   return (
     <div className='type'>
@@ -30,7 +32,7 @@ export function TypeFilter({handleChangeType}) {
             <h6 className='title'>Type</h6>             
             { TypeRadioButton.map(option=>
             <div key={option.name}>
-                <input type="radio" name="radio-type" value={option.value} onChange={()=>handleChangeType(option.value)}/>
+                <input type="radio" name="radio-type" value={option.name} onChange={()=>handleChangeType(option.value)}/>
             <label>{option.name}</label>
             </div>
             )}

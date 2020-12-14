@@ -1,17 +1,19 @@
-import React from 'react';
+import React from 'react'
+
 export function ColorFilter({handleChangeColor}) {
-    const optionsColor = [
-        {name: 'blue',value: '1',},
-        {name: 'yellow',value: '2'},
-        {name: 'red',value: '3'},
-        {name: 'brown',value: '4'},
-        {name: 'gray',value: '5'},
-        {name: 'green',value: '6'},
-        {name: 'purple',value: '7'},
-        {name: 'white',value: '8'},
-        {name: 'pink',value: '9',},
-        {name: 'black',value: '10'},
-      ];
+  
+  const optionsColor = [
+    {name: 'blue',value: '2',},
+    {name: 'yellow',value: '10'},
+    {name: 'red',value: '8'},
+    {name: 'brown',value: '3'},
+    {name: 'gray',value: '4'},
+    {name: 'green',value: '5'},
+    {name: 'purple',value: '7'},
+    {name: 'white',value: '9'},
+    {name: 'pink',value: '6',},
+    {name: 'black',value: '1'},
+  ];
     
   return (
     <div  className='color'>     
