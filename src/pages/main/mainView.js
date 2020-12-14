@@ -14,7 +14,10 @@ export function MainView() {
   const [pokemonFilter,setPokemonFilter]=useState([])
   
   const increase = () => setLengthList(lengthList+20)
-  const Partition =(arr)=> setPartitionList(arr.slice(0,lengthList))
+  const Partition =(arr)=> {
+    console.log([...new Set(arr.map((name,id) => name))])  
+    setPartitionList(arr.slice(0,lengthList))
+  }
   
   useEffect(()=>{
       let pokedex = []
@@ -27,7 +30,7 @@ export function MainView() {
         }
         if(pokemonFilter.length>0){Partition(pokemonFilter)}
         else{Partition(JSON.parse(localStorage.getItem('pokedex')))}                
-  },[lengthList])  
+  },[lengthList,pokemonFilter])  
 
   const handleChangeType = (value) => {
     
@@ -71,7 +74,7 @@ export function MainView() {
         }) 
       }
       console.log('color filter',definitiveArr)
-      //setPokemonFilter(pokemonFilter.concat(definitiveArr))
+      setPokemonFilter(pokemonFilter.concat(definitiveArr))
     })       
   }  
 
@@ -96,12 +99,6 @@ export function MainView() {
       })
     }
   }
-  useEffect(()=>{
-    if(pokemonFilter.length!==0) {
-      /*setPokemonFilter(Array.from(new Set(pokemonFilter)))
-      console.log(Array.from(new Set(pokemonFilter)))*/
-    }
-  },[pokemonFilter])
 
   return (
     <div className='main'> 
