@@ -51,7 +51,7 @@ export function MainView() {
         })
       }
       console.log('type filter',definitiveArr)
-      setPokemonFilter(pokemonFilter.concat(definitiveArr)) 
+      setPokemonFilter(definitiveArr) 
     })
   }
       
@@ -74,7 +74,7 @@ export function MainView() {
         }) 
       }
       console.log('color filter',definitiveArr)
-      setPokemonFilter(pokemonFilter.concat(definitiveArr))
+      setPokemonFilter(definitiveArr)
     })       
   }  
 
@@ -95,7 +95,7 @@ export function MainView() {
         })
       }
       console.log('gender filter',definitiveArr)
-      setPokemonFilter(pokemonFilter.concat(definitiveArr))
+      setPokemonFilter(definitiveArr)
       })
     }
   }
